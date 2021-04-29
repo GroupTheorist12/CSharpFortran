@@ -22,7 +22,7 @@ sudo apt-get install build-essential
 
 #### Install .NET 5.0 SDK
 
-[Install the .NET SDK]: https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
+[Install the .NET SDK](https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu)
 
 
 
@@ -32,7 +32,7 @@ From Fortran Wiki:
 
 `iso_c_binding` is a standard intrinsic module which defines named constants, types, and procedures for [C interoperability](http://fortranwiki.org/fortran/show/C+interoperability).
 
-[iso_c_binding]: http://fortranwiki.org/fortran/show/iso_c_binding
+[iso_c_binding](http://fortranwiki.org/fortran/show/iso_c_binding)
 
 The code in this git exploits this interoperability to call Fortran routines from C# using P/Invoke (Platform Invocation Services). Below is a Fortran subroutine we wish to call:
 
@@ -177,7 +177,7 @@ contains
 end module <name>
 ```
 
-[Fortran Module]: http://fortranwiki.org/fortran/show/Module
+[Fortran Module](http://fortranwiki.org/fortran/show/Module)
 
 #### Module csharp_module.f95
 

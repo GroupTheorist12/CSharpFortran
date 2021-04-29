@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/Owner/CSharpFortran/CSharpFortran.csproj",
+      "projectUniqueName": "/mnt/c/Users/Owner/CSharpFortran/CSharpFortran/CSharpFortran.csproj",
       "projectName": "CSharpFortran",
-      "projectPath": "/mnt/c/Users/Owner/CSharpFortran/CSharpFortran.csproj",
+      "projectPath": "/mnt/c/Users/Owner/CSharpFortran/CSharpFortran/CSharpFortran.csproj",
       "packagesPath": "/home/brigg/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/Owner/CSharpFortran/obj/",
+      "outputPath": "/mnt/c/Users/Owner/CSharpFortran/CSharpFortran/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/brigg/.nuget/NuGet/NuGet.Config"

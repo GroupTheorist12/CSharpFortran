@@ -1,0 +1,16 @@
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/CSharpFortran
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/CSharpFortran.deps.json
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/CSharpFortran.runtimeconfig.json
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/CSharpFortran.runtimeconfig.dev.json
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/CSharpFortran.dll
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/ref/CSharpFortran.dll
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/CSharpFortran.pdb
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.csprojAssemblyReference.cache
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.AssemblyInfoInputs.cache
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.AssemblyInfo.cs
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.csproj.CoreCompileInputs.cache
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.dll
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/ref/CSharpFortran.dll
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.pdb
+/mnt/c/Users/Owner/CSharpFortran/obj/Debug/net5.0/linux-x64/CSharpFortran.genruntimeconfig.cache

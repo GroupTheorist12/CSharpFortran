@@ -1,0 +1,2 @@
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/publish/CSharpFortran.pdb
+/mnt/c/Users/Owner/CSharpFortran/bin/Debug/net5.0/linux-x64/publish/CSharpFortran

@@ -1,3 +1,8 @@
 *.exe 
 *.dll 
 *.so
+bin/Debug/net5.0/csharp_module.so
+bin/Debug/net5.0/CSharpFortran
+*.dll
+*.pdb
+bin/Debug/net5.0/linux-x64/CSharpFortran

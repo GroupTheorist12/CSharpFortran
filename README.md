@@ -113,14 +113,14 @@ Let's walk through the steps to create a C# .NET 5.0 project to call the above F
    }
    ```
 
-3. #### Create file myfortsub.f95 and build shared library.
+3. #### Create file myfortsub.f90 and build shared library.
 
-   Cut and paste the Fortran subroutine above in your favorite editor and save it in the *CallFortranFromCSharp* directory as *myfortsub.f95*.  
+   Cut and paste the Fortran subroutine above in your favorite editor and save it in the *CallFortranFromCSharp* directory as *myfortsub.f90*.  
 
    In the terminal window run the following command to create a shared library.
 
    ```bash
-   $ gfortran -shared -O2 myfortsub.f95 -o myfortsub.so -fPIC
+   $ gfortran -shared -O2 myfortsub.f90 -o myfortsub.so -fPIC
    ```
 
 4. #### Build C# console project and run it.
@@ -179,9 +179,9 @@ end module <name>
 
 [Fortran Module](http://fortranwiki.org/fortran/show/Module)
 
-#### Module csharp_module.f95
+#### Module csharp_module.f90
 
-In the git source *csharp_module* directory we have the source file csharp_module.f95. It has three example subroutines:
+In the git source *csharp_module* directory we have the source file csharp_module.f90. It has three example subroutines:
 
 1. **PassString** - Allows C# to pass a C# string and the string length to Fortran.
 
@@ -308,7 +308,7 @@ The code in the git can be cloned and ran if *gfortran*, *make* and *.Net 5.0* a
 
    ```bash
    make: Entering directory '/home/brigg/CSharpFortran/csharp_module'
-   gfortran -shared -O2 csharp_module.f95 -o csharp_module.so -fPIC
+   gfortran -shared -O2 csharp_module.f90 -o csharp_module.so -fPIC
    make: Leaving directory '/home/brigg/CSharpFortran/csharp_module'
     >Howdy Doody Man<          15
    0 : 32.00 [C] = 89.60 [F]

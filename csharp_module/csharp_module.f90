@@ -9,68 +9,99 @@ module csharp_module
         real(c_float) :: z
     end type point3d
 
-    contains !what subs we have
+contains !what subs we have
 
-    subroutine fflip(p) bind(c,name='fflip') ! bind with the fflip name 
-         
+    subroutine fflip(p) bind(c, name='fflip') ! bind with the fflip name
+
         !declare our struct that will be passed. will pass in and values
         !and pass back values flipped
-        type(point3d), intent(inout) :: p 
+        type(point3d), intent(inout) :: p
 
         real :: T
 
-  
         T = p%x
         p%x = p%y
         p%y = T
         p%z = -2.*p%z
 
-
     end subroutine fflip
+
+    subroutine ffliparr(p, n) bind(c, name='ffliparr') ! bind with the fflip name
+
+        !declare our struct that will be passed. will pass in and values
+        !and pass back values flipped
+        type(point3d), dimension(n), intent(inout) :: p
+        integer(c_int), intent(in) :: n
+
+        real :: T
+        integer :: i
+        do i = 1, n
+            T = p(i)%x
+            p(i)%x = p(i)%y
+            p(i)%y = T
+            p(i)%z = -2.*p(i)%z
+        end do
+
+    end subroutine ffliparr
 
     !
     ! Convert temperature degrees Celsius Fahrenheit
     ! degC, input array of celsius values
     ! degF output array of Fahrenheit
     ! n number of values in arrays
-    subroutine DegCtoF(degC, degF, n)&
-        bind(c, name = "DegCtoF")
-    
+    subroutine DegCtoF(degC, degF, n) &
+        bind(c, name="DegCtoF")
+
         integer(c_int), intent(in) :: n
         real(c_double), intent(in), dimension(n) :: degC
         real(c_double), intent(out), dimension(n) :: degF
         integer :: i
-    
+
         do i = 1, n
-            degF(i) = ( degC(i) * 1.8 ) + 32
+            degF(i) = (degC(i)*1.8) + 32
         end do
-    
+
     end subroutine DegCtoF
 
-    subroutine PassString ( input_string, n) bind ( C, name="PassString" )
+    subroutine PassMatrix(matrix, cols, rows) &
+        bind(c, name="PassMatrix")
+
+        integer(c_int), intent(in) :: cols
+        integer(c_int), intent(in) :: rows
+        real(c_double), intent(in), dimension(cols, rows) :: matrix
+
+        integer i, j
+
+        DO j = 1, cols
+            print *, (matrix(i, j), i=1, rows)
+        END DO
+
+    end subroutine PassMatrix
+
+    subroutine PassString(input_string, n) bind(C, name="PassString")
 
         use iso_c_binding, only: C_CHAR, c_null_char
         implicit none
-     
-        character (kind=c_char, len=1), dimension (n), intent (in) :: input_string
+
+        character(kind=c_char, len=1), dimension(n), intent(in) :: input_string
         integer(c_int), intent(in) :: n
 
-        character (len=n) :: regular_string
+        character(len=n) :: regular_string
         integer :: i
-     
+
         regular_string = " "
-        loop_string: do i=1, n
-           if ( input_string (i) == c_null_char ) then
-              exit loop_string
-           else
-              regular_string (i:i) = input_string (i)
-           end if
+        loop_string: do i = 1, n
+            if (input_string(i) == c_null_char) then
+                exit loop_string
+            else
+                regular_string(i:i) = input_string(i)
+            end if
         end do loop_string
-     
-        write (*, *) ">", trim (regular_string), "<", len_trim (regular_string)
-     
+
+        write (*, *) ">", trim(regular_string), "<", len_trim(regular_string)
+
         return
-     
-     end subroutine PassString
-     
-end module csharp_module     
+
+    end subroutine PassString
+
+end module csharp_module
